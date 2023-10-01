@@ -1,0 +1,36 @@
+{
+	"name": "easyparking",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.23.0",
+		"@babel/preset-env": "^7.22.20",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.20.4",
+		"babel-loader": "^9.1.3",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.3",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^4.4.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.4.2",
+		"@svelteuidev/composables": "^0.15.3",
+		"@svelteuidev/core": "^0.15.3",
+		"@svelteuidev/dates": "^0.15.3",
+		"@svelteuidev/motion": "^0.15.3",
+		"@svelteuidev/preprocessors": "^0.15.3",
+		"@svelteuidev/prism": "^0.15.3",
+		"dayjs": "^1.11.10",
+		"radix-icons-svelte": "^1.2.1"
+	}
+}

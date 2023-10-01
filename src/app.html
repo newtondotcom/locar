@@ -2,9 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="manifest" href="/manifest.json">
 		%sveltekit.head%
+		<meta property="og:title" content="Locar">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="Use locar to find you parked car">
+		<meta property="og:image" content="https://locar.site/favicon.png">
+		<meta property="og:url" content="https://locar.site">
+		<meta property="og:site_name" content="locar.site">
+		<meta property="og:locale" content="en_US"> <!-- English -->
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+		<meta name="theme-color" media="(prefers-color-scheme: dark)"  content="black">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>

@@ -1,19 +1,21 @@
 <script lang="ts">
-    import { Image } from '@svelteuidev/core';
-    import { Button } from '@svelteuidev/core';
     import { onMount } from 'svelte';
-    import { Title } from '@svelteuidev/core';
     import { goto } from '$app/navigation';
     //width={window.innerWidth} height={0.6*window.innerHeight}
     
     let loading = true; 
     let alreadySaved = false;
     let savedImage;
+    let savedPosition;
 
     onMount(() => {
         //check if a image is stored in local storage, plus its location
-        if (localStorage.getItem('image') !== null && localStorage.getItem('position') !== null) {
+        if (localStorage.getItem('image') !== null) {
             savedImage = localStorage.getItem('image');
+            alreadySaved = true;
+        }
+        if (localStorage.getItem('position') !== null) {
+            savedPosition = localStorage.getItem('position');
             alreadySaved = true;
         }
         loading = false;
@@ -32,23 +34,28 @@
 {:else}
 
 {#if alreadySaved}
-<Image radius='md' src={savedImage} alt="Your parking spot" />
+{#if savedPosition}
+<div class="hea1">Your car is parked at {savedPosition}</div>
+{/if}
+{#if savedImage}
+<img src={savedImage} alt="Your parking spot" />
+{/if}
 {:else}
-<Title order={4}>looks like you have never saved your car last position</Title>
+<h4>looks like you have never saved your car last position</h4>
 {/if}
 
 <div class='buttons'>
 {#if alreadySaved}
-<Button on:click={()=>goto("/save")} variant='gradient' gradient={{from: 'teal', to: 'blue', deg: 60}}>
+<button on:click={()=>goto("/save")}>
     <i class="fa-solid fa-location-pin"></i><span class="narrow-space"></span> Change the location
-</Button>
-<Button on:click={handleClick} variant='gradient' gradient={{from: 'orange', to: 'red', deg: 45}}>
+</button>
+<button on:click={handleClick}>
 	<i class="fa-solid fa-location-crosshairs"></i><span class="narrow-space"></span> Waypoint
-</Button>
+</button>
 {:else}
-<Button on:click={()=>goto("/save")} variant='gradient' gradient={{from: 'teal', to: 'blue', deg: 60}}>
+<button on:click={()=>goto("/save")}>
     <i class="fa-solid fa-location-pin"></i><span class="narrow-space"></span> Save the location
-</Button>
+</button>
 {/if}
 </div>
 
@@ -87,5 +94,11 @@
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
+    }
+
+    img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
     }
 </style>

@@ -1,8 +1,6 @@
 <script lang="ts">
 let imageloaded= false;
-let positionloaded= false;
-
-import { Checkbox } from '@svelteuidev/core';
+let positionloaded= false
 import Success from '$lib/Success.svelte';
 
 function showPosition() {
@@ -43,11 +41,11 @@ function showPosition() {
     <div class="needed">
         hint : we need two things to remember where you parked your car, just fill above to check them
         <li>
-            <Checkbox checked={imageloaded}/>
+            <input type="checkbox" checked={imageloaded}/>
             <div class="txt">your current location</div>
         </li>
         <li>
-            <Checkbox checked={positionloaded}/>
+            <input type="checkbox" checked={positionloaded}/>
             <div class="txt">a picture of your car parked</div>
         </li>
     </div>
@@ -58,8 +56,8 @@ function showPosition() {
     </div>
 </div>
 
-{#if imageloaded && positionloaded}
-<Success />
+{#if imageloaded || positionloaded}
+<Success bind:imageloaded bind:positionloaded />
 {/if}
 
 

@@ -1,20 +1,18 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
-import { Button } from '@svelteuidev/core';
-import { Title } from '@svelteuidev/core';
+import { goto } from '$app/navigation';
 </script>
 
 <section>
-    <Title order={1} variant='gradient' gradient={{from: 'blue', to: 'red', deg: 45}}>locar</Title> 
+    <h1>locar</h1> 
     <div class="hea1"> is a simple app created to help you remember where you parked your car.
     It is fully open source and free to use. None of your datas is ever stored or used outside of your device.
      We respect your privacy and are not using any cookies to track you. </div>
 </section>
 
 <section>
-<Button size="lg" style="display:flex;" href="/use" variant='gradient' gradient={{from: 'grape', to: 'pink', deg: 35}} act>
+<button on:click={()=>goto("/use")}>
 	try it
-</Button>
+</button>
 </section>
 
 
@@ -30,6 +28,7 @@ import { Title } from '@svelteuidev/core';
 </section>
 
 <style>
+
     .hea1 {
         margin-top: 0rem;
         margin-bottom: 1rem;

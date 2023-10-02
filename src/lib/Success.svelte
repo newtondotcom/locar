@@ -1,9 +1,22 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
+    export let imageloaded;
+    export let positionloaded;
+
+    function handle(){
+        if (!imageloaded){
+            localStorage.removeItem('image');
+        }
+        if (!positionloaded){
+            localStorage.removeItem('position');
+        }
+        goto("/use")
+    }
+
 </script>
 
 <div class="container">
-    <button on:click={()=>goto("/use")} class="success">everything seems good, let's save it !</button>
+    <button on:click={handle} class="success">everything seems good, let's save it !</button>
 </div>
 
 <style>

@@ -1,8 +1,9 @@
 <script lang="ts">
 import { goto } from '$app/navigation';
 import { page } from '$app/stores';
+import Toasts from '$lib/notifications/Toasts.svelte';
 </script>
-
+<Toasts/>
 <body>
 {#if $page.url.pathname !== '/' }
 <button class="title" on:click={()=>goto("/")}>

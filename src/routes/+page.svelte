@@ -1,5 +1,6 @@
 <script lang="ts">
 import { goto } from '$app/navigation';
+import constants from '$lib/constants';
 </script>
 
 <section>
@@ -18,8 +19,11 @@ import { goto } from '$app/navigation';
 
 
 <section>
-    <div class="hea1">Since this is a web site, to use it offline, you must add it to your home screen.</div> A quick tutorial can be found <a href="https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/">here</a>
+    <div class="hea1">Since this is a web site, to use it offline, you must add it to your home screen.</div>
+     A quick tutorial can be found <a href="https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/">here</a>
 </section>
+
+<section>{constants.Version}</section>
 
 <section class="row">
     <button class="svg" on:click={()=>goto("https://github.com/newtondotcom/locapark")}><i class="fa-brands fa-github"></i></button>

@@ -21,8 +21,24 @@
         loading = false;
     })
 
-    function handleClick() {
-        alert('Button clicked!');
+    function handleWaypoint() {
+        const isMobile = /Android|iOS|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (isiOS) {
+                const [latitude, longitude] = savedPosition.split(';');
+                const appleMapsURL = `http://maps.apple.com/?q=${latitude},${longitude}`;
+                console.log(appleMapsURL);
+                window.location.href = appleMapsURL;
+            } else {
+                const [latitude, longitude] = savedPosition.split(';');
+                const googleMapsURL = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                window.location.href = googleMapsURL;
+            }
+        } else {
+            alert('Navigation is only supported on mobile devices.');
+        }
     }
 </script>
 
@@ -35,10 +51,12 @@
 
 {#if alreadySaved}
 {#if savedPosition}
-<div class="hea1">Your car is parked at {savedPosition}</div>
+<button on:click={handleWaypoint}>
+	<i class="fa-solid fa-location-crosshairs"></i><span class="narrow-space"></span> Waypoint to last location
+</button>
 {/if}
 {#if savedImage}
-<img src={savedImage} alt="Your parking spot" />
+<div class="container"><img src={savedImage} alt="Your parking spot" /></div>
 {/if}
 {:else}
 <h4>looks like you have never saved your car last position</h4>
@@ -47,10 +65,7 @@
 <div class='buttons'>
 {#if alreadySaved}
 <button on:click={()=>goto("/save")}>
-    <i class="fa-solid fa-location-pin"></i><span class="narrow-space"></span> Change the location
-</button>
-<button on:click={handleClick}>
-	<i class="fa-solid fa-location-crosshairs"></i><span class="narrow-space"></span> Waypoint
+    <i class="fa-solid fa-location-pin"></i><span class="narrow-space"></span> Change the previous location
 </button>
 {:else}
 <button on:click={()=>goto("/save")}>
@@ -100,5 +115,31 @@
         width: 80%;
         height: 80%;
         object-fit: cover;
+        border-radius: 20px;
+        align-items: center;
+    }
+
+    button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 20px;
+        color : black;
+        font-size: 17px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        font-size: 30px;
+        color: white;
+        width: 95vw;
+        height: 60vh;
     }
 </style>

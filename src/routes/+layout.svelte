@@ -6,7 +6,7 @@ import { page } from '$app/stores';
 <body>
 {#if $page.url.pathname !== '/' }
 <button class="title" on:click={()=>goto("/")}>
-    <h1>locar</h1>
+    <h1>locapark</h1>
     <h2>never forget where you parked your car</h2>
 </button>
 {/if}

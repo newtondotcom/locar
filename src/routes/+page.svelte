@@ -3,7 +3,7 @@ import { goto } from '$app/navigation';
 </script>
 
 <section>
-    <h1>locar</h1> 
+    <h1>locapark</h1> 
     <div class="hea1"> is a simple app created to help you remember where you parked your car.
     It is fully open source and free to use. None of your datas is ever stored or used outside of your device.
      We respect your privacy and are not using any cookies to track you. </div>
@@ -22,7 +22,7 @@ import { goto } from '$app/navigation';
 </section>
 
 <section class="row">
-    <button class="svg" on:click={()=>goto("https://github.com/newtondotcom/locar")}><i class="fa-brands fa-github"></i></button>
+    <button class="svg" on:click={()=>goto("https://github.com/newtondotcom/locapark")}><i class="fa-brands fa-github"></i></button>
     <button class="svg" on:click={()=>goto("https://www.instagram.com/newton.creations/")}><i class="fa-brands fa-instagram"></i></button>
     <button class="svg" on:click={()=>goto("https://www.linkedin.com/in/robin-augereau/")}><i class="fa-brands fa-linkedin"></i></button>
 </section>

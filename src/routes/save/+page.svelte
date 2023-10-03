@@ -2,19 +2,22 @@
 let imageloaded= false;
 let positionloaded= false
 import Success from '$lib/Success.svelte';
+import { addToast } from "$lib/stores/notif";
+import constants from "$lib/constants";
 
-function showPosition() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            console.log(position.coords.latitude+ ";" + position.coords.longitude);
-            localStorage.setItem('position', position.coords.latitude+ ";" + position.coords.longitude);
-            alert('Position saved!');
-            positionloaded = true;
-        });
-    } else {
-        alert("Geolocation is not supported by this browser.");
+    function submitPosition() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                console.log(position.coords.latitude+ ";" + position.coords.longitude);
+                localStorage.setItem('position', position.coords.latitude+ ";" + position.coords.longitude);
+                addToast({ message: "Your position has been saved ! ", type: "success", dismissible: true, timeout: constants.delayNotification });
+                positionloaded = true;
+                console.log(positionloaded);
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
     }
-}
 
     function submitFile(event) {
         event.preventDefault();
@@ -26,8 +29,7 @@ function showPosition() {
             reader.onloadend = function () {
                 const base64String = reader.result;
                 localStorage.setItem('image', base64String.toString()); 
-                alert('Image saved!');
-
+                addToast({ message: "The image has been saved ! ", type: "success", dismissible: true, timeout: constants.delayNotification });
             };
             reader.readAsDataURL(file);
             imageloaded = true;
@@ -37,56 +39,36 @@ function showPosition() {
     }    
 </script>
 
+<div class="pre">you can choose to input your car location and a picture of it (to remember your park number for ex), or just one of them</div>
 <div class="container">
-    <div class="needed">
-        hint : we need two things to remember where you parked your car, just fill above to check them
-        <li>
-            <input type="checkbox" checked={imageloaded}/>
-            <div class="txt">your current location</div>
-        </li>
-        <li>
-            <input type="checkbox" checked={positionloaded}/>
-            <div class="txt">a picture of your car parked</div>
-        </li>
-    </div>
-
     <div class="inputs">
-        <input id="fileInput" on:change={submitFile} type="file" accept="image/*" />
-        <button id="pos" type="button" on:click={showPosition}>Set Position</button>
+        <div class="input"><i class="fa-solid fa-camera"></i> Picture of your car <input id="fileInput" on:change={submitFile} type="file" accept="image/*"/></div>
+        <div class="input"><i class="fa-solid fa-location-crosshairs"></i> Position <button id="pos" type="button" on:click={submitPosition}>
+        {#if positionloaded}
+        <i class="fa-solid fa-check"></i>
+        {:else}    
+            Set Position
+        {/if}
+        </button></div>
     </div>
 </div>
 
-{#if imageloaded || positionloaded}
 <Success bind:imageloaded bind:positionloaded />
-{/if}
 
 
 <style>
-    .needed {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-        background-color: rgb(106, 207, 143);
-        border-radius: 20px;
-        padding: 20px;
-        color: white;
-        position: absolute;
-        bottom: 5px;
-        width: 80%;
-    }
-
-    li{
-        list-style-type: none;
+    button {
         display: flex;  
         flex-direction: row;
         justify-content: center;
         margin: 10px;
-    }
-
-    .txt {
-        margin-left: 10px;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 20px;
+        color : black;
+        width: auto;
+        height: 60px;
+        background-color: white;
     }
 
     .container {
@@ -94,11 +76,11 @@ function showPosition() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
         border-radius: 30px;
+        font-size: 30px;
         color: white;
-        background-color: blue;
+        width: 95vw;
+        height: 50vh;
     }
 
     .inputs {
@@ -106,21 +88,54 @@ function showPosition() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
         border-radius: 20px;
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         color: white;
         background-color: blue;
         width: 80%;
     }
 
+    .input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        border-radius: 20px;
+        padding: 20px;
+        color: white;
+        background-color: blue;
+        width: 80%;
+        font-size: 25px;
+    }
+
+    i{
+        transform: translateY(2px);
+    }
+
     input {
-        margin-left: 20px;
         font-size: 1rem;
     }
 
     #pos {
         margin-top: 20px;
+    }
+
+    i {
+        margin : 10px;
+    }
+
+    .pre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        padding: 20px;
+        color: black;
+        width: 80%;
     }
 </style>

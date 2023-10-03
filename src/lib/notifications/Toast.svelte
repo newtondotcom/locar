@@ -40,10 +40,10 @@
       display: flex;
       align-items: center;
       margin: 0 auto 0.5rem auto;
-      width: 20rem;
+      width: 80vw;
       position: absolute;
-      top: 90vh;
-      left: calc(50% - 10rem);
+      top: 92vh;
+      left: 5vw;
     }
     .error {
       background: IndianRed;

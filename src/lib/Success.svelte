@@ -16,11 +16,16 @@
 </script>
 
 <div class="container">
-    <button on:click={handle} class="success">everything seems good, let's save it !</button>
+    {#if imageloaded || positionloaded}
+    <button on:click={handle} class="button success">let's save it !</button>
+    {:else}
+    <button disabled class="button non">input position or picture to proceed</button>
+    {/if}
 </div>
 
 <style>
-    .success {  
+
+    .button {
         display: flex;  
         flex-direction: row;
         justify-content: center;
@@ -30,8 +35,13 @@
         padding: 20px;
         color : black;
         width: auto;
-        height: 60px;
-        background-color: #be2596;
+        font-size: 20px;
+    }
+    .success {  
+        background-color: orange;
+    }
+    .non {
+        background-color: transparent;
     }
 
     .container {

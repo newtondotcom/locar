@@ -21,7 +21,7 @@
   </div>
   {/if}
   
-  <style>
+  <style lang="postcss">
     .popup-cookies {
       position: fixed;
       bottom: 20px;

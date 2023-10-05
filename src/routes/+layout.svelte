@@ -1,7 +1,12 @@
 <script lang="ts">
-import { goto } from '$app/navigation';
-import { page } from '$app/stores';
-import Toasts from '$lib/notifications/Toasts.svelte';
+    import "../app.css"
+    import { goto } from '$app/navigation';
+    import { page } from '$app/stores';
+    import Toasts from '$lib/notifications/Toasts.svelte';
+
+
+    
+//@import '@fortawesome/fontawesome-free/css/all.css';
 </script>
 <Toasts/>
 <body>
@@ -15,8 +20,11 @@ import Toasts from '$lib/notifications/Toasts.svelte';
 </body>
 
 
-<style>
-@import '@fortawesome/fontawesome-free/css/all.css';
+<style lang="postcss">
+:global(html) {
+    background-color: theme(colors.gray.100);
+}
+
 body {
     width: 100vw;
     height: 100vh;

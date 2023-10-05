@@ -16,6 +16,10 @@ import constants from '$lib/constants';
 </button>
 </section>
 
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>
+  
 
 
 <section>
@@ -31,7 +35,7 @@ import constants from '$lib/constants';
     <button class="svg" on:click={()=>goto("https://www.linkedin.com/in/robin-augereau/")}><i class="fa-brands fa-linkedin"></i></button>
 </section>
 
-<style>
+<style lang="postcss">
 
     .hea1 {
         margin-top: 0rem;

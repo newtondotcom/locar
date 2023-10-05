@@ -56,7 +56,7 @@ import constants from "$lib/constants";
 <Success bind:imageloaded bind:positionloaded />
 
 
-<style>
+<style lang="postcss">
     button {
         display: flex;  
         flex-direction: row;

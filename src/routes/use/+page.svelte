@@ -76,7 +76,7 @@
 
 {/if}
 
-<style>
+<style lang="postcss">
     .buttons {
         display: flex;
         flex-direction: row;

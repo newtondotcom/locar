@@ -1,9 +1,6 @@
 <script>
     import { createEventDispatcher } from "svelte";
     import { fade } from "svelte/transition";
-    import SuccessIcon from "./SuccessIcon.svelte";
-    import ErrorIcon from "./ErrorIcon.svelte";
-    import InfoIcon from "./InfoIcon.svelte";
     import CloseIcon from "./CloseIcon.svelte";
   
     const dispatch = createEventDispatcher();
@@ -12,51 +9,18 @@
     export let dismissible = true;
   </script>
   
-  <article class={type} role="alert" transition:fade>
-    {#if type === "success"}
-      <SuccessIcon width="1.1em" />
-    {:else if type === "error"}
-      <ErrorIcon width="1.1em" />
-    {:else}
-      <InfoIcon width="1.1em" />
-    {/if}
-  
-    <div class="text">
-      <slot />
-    </div>
-  
-    {#if dismissible}
+  <div class="toast toast-center">
+    <div class="alert alert-info">
+      <span><slot /></span>
+      {#if dismissible}
       <button class="close" on:click={() => dispatch("dismiss")}>
         <CloseIcon width="0.8em" />
       </button>
-    {/if}
-  </article>
+      {/if}
+    </div>
+  </div>
   
   <style lang="postcss">
-    article {
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.2rem;
-      display: flex;
-      align-items: center;
-      margin: 0 auto 0.5rem auto;
-      width: 80vw;
-      position: absolute;
-      top: 92vh;
-      left: 5vw;
-    }
-    .error {
-      background: IndianRed;
-    }
-    .success {
-      background: MediumSeaGreen;
-    }
-    .info {
-      background: SkyBlue;
-    }
-    .text {
-      margin-left: 1rem;
-    }
     button {
       color: white;
       background: transparent;

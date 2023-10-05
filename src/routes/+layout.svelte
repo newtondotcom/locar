@@ -3,13 +3,11 @@
     import { goto } from '$app/navigation';
     import { page } from '$app/stores';
     import Toasts from '$lib/notifications/Toasts.svelte';
-
-
-    
-//@import '@fortawesome/fontawesome-free/css/all.css';
 </script>
+
 <Toasts/>
 <body>
+    
 {#if $page.url.pathname !== '/' }
 <button class="title" on:click={()=>goto("/")}>
     <h1>locapark</h1>

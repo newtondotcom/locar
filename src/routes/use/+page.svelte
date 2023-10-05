@@ -28,7 +28,7 @@
             const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
             if (isiOS) {
                 const [latitude, longitude] = savedPosition.split(';');
-                const appleMapsURL = `http://maps.apple.com/?q=${latitude},${longitude}`;
+                const appleMapsURL = `https://maps.apple.com/?q=${latitude},${longitude}`;
                 console.log(appleMapsURL);
                 window.location.href = appleMapsURL;
             } else {
@@ -43,34 +43,25 @@
 </script>
 
 {#if loading}    
-<div class="loader-container">
-    <div class="loader"></div>
-</div>
-
+<span class="loading loading-spinner loading-lg"></span>
 {:else}
 
 {#if alreadySaved}
-{#if savedPosition}
-<button on:click={handleWaypoint}>
-	<i class="fa-solid fa-location-crosshairs"></i><span class="narrow-space"></span> Waypoint to last location
-</button>
+{#if savedPosition}    
+<button class="btn btn-outline btn-success  w-2/3 mx-auto">Waypoint to last location</button>
 {/if}
 {#if savedImage}
-<div class="container"><img src={savedImage} alt="Your parking spot" /></div>
+    <div class="container"><img src={savedImage} alt="Your parking spot" /></div>
 {/if}
 {:else}
-<h4>looks like you have never saved your car last position</h4>
+    <h4>looks like you have never saved your car last position</h4>
 {/if}
 
 <div class='buttons'>
 {#if alreadySaved}
-<button on:click={()=>goto("/save")}>
-    <i class="fa-solid fa-location-pin"></i><span class="narrow-space"></span> Change the previous location
-</button>
+<button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 mx-auto btn-info">Change the previous location</button>
 {:else}
-<button on:click={()=>goto("/save")}>
-    <i class="fa-solid fa-location-pin"></i><span class="narrow-space"></span> Save the location
-</button>
+<button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto">Save your location</button>
 {/if}
 </div>
 
@@ -85,27 +76,6 @@
         margin-top: 1rem;
     }
 
-    .narrow-space {
-            width: 10px;
-            display: inline-block;
-    }
-
-    .loader-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .loader {
-        border: 4px solid rgba(0, 0, 0, 0.2);
-        border-top: 4px solid #007bff; /* Loader color */
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        animation: spin 2s linear infinite; /* Animation duration */
-    }
-
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
@@ -117,18 +87,6 @@
         object-fit: cover;
         border-radius: 20px;
         align-items: center;
-    }
-
-    button {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 10px;
-        border: 1px solid white;
-        border-radius: 20px;
-        padding: 20px;
-        color : black;
-        font-size: 17px;
     }
 
     .container {

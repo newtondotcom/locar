@@ -1,15 +1,160 @@
+<!-- Container for demo purpose -->
+<div class="container my-24 mx-auto md:px-6">
+  <section class="mb-32 text-center">
+    <h2 class="mb-12 text-3xl font-bold">Testimonials</h2>
 
-<div class="flex flex-col max-w-md gap-2 p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
-  <h2 class="flex items-center gap-2 text-xl font-semibold leadi tracki">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current shrink-0 dark:text-violet-400">
-          <path d="M451.671,348.569,408,267.945V184c0-83.813-68.187-152-152-152S104,100.187,104,184v83.945L60.329,348.568A24,24,0,0,0,81.432,384h86.944c-.241,2.636-.376,5.3-.376,8a88,88,0,0,0,176,0c0-2.7-.135-5.364-.376-8h86.944a24,24,0,0,0,21.1-35.431ZM312,392a56,56,0,1,1-111.418-8H311.418A55.85,55.85,0,0,1,312,392ZM94.863,352,136,276.055V184a120,120,0,0,1,240,0v92.055L417.137,352Z"></path>
-          <rect width="32" height="136" x="240" y="112"></rect>
-          <rect width="32" height="32" x="240" y="280"></rect>
-      </svg>Necessitatibus dolores quasi quae?
-  </h2>
-  <p class="flex-1 dark:text-gray-400">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
-  <div class="flex flex-col justify-end gap-3 mt-6 sm:flex-row">
-      <button class="px-6 py-2 rounded-sm">No</button>
-      <button class="px-6 py-2 rounded-sm shadow-sm dark:bg-violet-400 dark:text-gray-900">Yes</button>
-  </div>
+    <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
+      <div class="mb-12 md:mb-0">
+        <div class="mb-6 flex justify-center">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
+            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+        </div>
+        <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+          Web Developer
+        </h6>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+          id officiis hic tenetur quae quaerat ad velit ab hic.
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+            <path fill="currentColor"
+              d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+          </svg>
+        </p>
+        <ul class="mb-0 flex justify-center">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="mb-12 md:mb-0">
+        <div class="mb-6 flex justify-center">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
+            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+        </div>
+        <h5 class="mb-2 text-lg font-bold">Lisa Cudrow</h5>
+        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+          Graphic Designer
+        </h6>
+        <p class="mb-4">
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam
+          corporis suscipit laboriosam, nisi ut aliquid commodi.
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+            <path fill="currentColor"
+              d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+          </svg>
+        </p>
+        <ul class="mb-0 flex justify-center">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="mb-0">
+        <div class="mb-6 flex justify-center">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
+            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+        </div>
+        <h5 class="mb-2 text-lg font-bold">John Smith</h5>
+        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+          Marketing Specialist
+        </h6>
+        <p class="mb-4">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti.
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+            <path fill="currentColor"
+              d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+          </svg>
+        </p>
+        <ul class="mb-0 flex justify-center">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m323 851 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm-90 125 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-355Z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </div>
+<!-- Container for demo purpose -->

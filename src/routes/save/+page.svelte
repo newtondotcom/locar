@@ -40,17 +40,22 @@ import constants from "$lib/constants";
 </script>
 
 <div class="pre">you can choose to input your car location and a picture of it (to remember your park number for ex), or just one of them</div>
-<div class="container">
-    <div class="inputs">
-        <div class="input"><i class="fa-solid fa-camera"></i> Picture of your car <input id="fileInput" on:change={submitFile} type="file" accept="image/*"/></div>
-        <div class="input"><i class="fa-solid fa-location-crosshairs"></i> Position <button id="pos" type="button" on:click={submitPosition}>
-        {#if positionloaded}
-        <i class="fa-solid fa-check"></i>
-        {:else}    
-            Set Position
-        {/if}
-        </button></div>
-    </div>
+    <div class="flex flex-col w-full border-opacity-50 text-black-800 text-xl font-semibold">
+        <div class="grid h-50 card bg-base-300 rounded-box place-items-center m-4">
+            <i class="fa-solid fa-camera"></i> Picture of your car 
+            <input id="fileInput" class="file-input file-input-bordered w-2/3 max-w-xs m-8" on:change={submitFile} type="file" accept="image/*"/>
+        </div>
+        <div class="divider">OR</div>
+        <div class="grid h-30 card bg-base-300 rounded-box place-items-center m-4">
+            <i class="fa-solid fa-location-crosshairs"></i> Position
+                <button class="btn btn-active btn-secondary" on:click={submitPosition}>                
+                    {#if positionloaded}
+                    <i class="fa-solid fa-check"></i>
+                    {:else}    
+                        Set Position
+                    {/if}
+                </button>
+        </div>
 </div>
 
 <Success bind:imageloaded bind:positionloaded />
@@ -78,7 +83,6 @@ import constants from "$lib/constants";
         align-items: center;
         border-radius: 30px;
         font-size: 30px;
-        color: white;
         width: 95vw;
         height: 50vh;
     }
@@ -108,7 +112,7 @@ import constants from "$lib/constants";
         color: white;
         background-color: blue;
         width: 80%;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     i{

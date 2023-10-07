@@ -45,7 +45,7 @@ import constants from "$lib/constants";
             <i class="fa-solid fa-camera"></i> Picture of your car 
             <input id="fileInput" class="file-input file-input-bordered w-2/3 max-w-xs m-8" on:change={submitFile} type="file" accept="image/*"/>
         </div>
-        <div class="divider">OR</div>
+        <div class="divider">AND / OR</div>
         <div class="grid h-30 card bg-base-300 rounded-box place-items-center m-4">
             <i class="fa-solid fa-location-crosshairs"></i> Position
                 <button class="btn btn-active btn-secondary" on:click={submitPosition}>                

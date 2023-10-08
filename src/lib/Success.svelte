@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
-    export let imageloaded;
-    export let positionloaded;
+    export let imageloaded:boolean;
+    export let positionloaded:boolean;
 
     function handle(){
         if (!imageloaded){
@@ -21,32 +21,12 @@
     {:else}
     <div class="alert">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <span>input position or picture to proceed</span>
+        <span>Input position or picture to proceed</span>
       </div>
     {/if}
 </div>
 
 <style lang="postcss">
-
-    .button {
-        display: flex;  
-        flex-direction: row;
-        justify-content: center;
-        margin: 10px;
-        border: 1px solid white;
-        border-radius: 20px;
-        padding: 20px;
-        color : black;
-        width: auto;
-        font-size: 20px;
-    }
-    .success {  
-        background-color: orange;
-    }
-    .non {
-        background-color: transparent;
-    }
-
     .container {
         display: flex;
         flex-direction: column;

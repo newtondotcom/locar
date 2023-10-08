@@ -8,7 +8,6 @@
     import NProgress from "nprogress";
     import { navigating } from "$app/stores";
     NProgress.configure({
-        // Full list:
         minimum: 0.16,
     });
     $: {

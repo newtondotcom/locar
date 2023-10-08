@@ -10,7 +10,7 @@ import constants from "$lib/constants";
             navigator.geolocation.getCurrentPosition(function(position) {
                 console.log(position.coords.latitude+ ";" + position.coords.longitude);
                 localStorage.setItem('position', position.coords.latitude+ ";" + position.coords.longitude);
-                addToast({ message: "Your position has been saved ! ", type: "success", dismissible: true, timeout: constants.delayNotification });
+                addToast({ message: "Your position has been saved ! ", dismissible: true, timeout: constants.delayNotification });
                 positionloaded = true;
                 console.log(positionloaded);
             });
@@ -40,17 +40,17 @@ import constants from "$lib/constants";
 </script>
 
 <div class="pre">you can choose to input your car location and a picture of it (to remember your park number for ex), or just one of them</div>
-    <div class="flex flex-col w-full border-opacity-50 text-black-800 text-xl font-semibold">
-        <div class="grid h-50 card bg-base-300 rounded-box place-items-center m-4">
+    <div class="flex flex-col justify-center items-center h-screen w-full border-opacity-50 text-black-800 text-xl font-semibold">
+        <div class="grid h-50 card bg-base-300 rounded-box place-items-center m-4 xl:w-2/3 sm:w-4/5">
             <i class="fa-solid fa-camera"></i> Picture of your car 
             <input id="fileInput" class="file-input file-input-bordered w-2/3 max-w-xs m-8" on:change={submitFile} type="file" accept="image/*"/>
         </div>
         <div class="divider">AND / OR</div>
-        <div class="grid h-30 card bg-base-300 rounded-box place-items-center m-4">
-            <i class="fa-solid fa-location-crosshairs"></i> Position
+        <div class="grid h-30 card bg-base-300 rounded-box place-items-center m-4 xl:w-2/3 sm:w-4/5">
+            <i class="fa-solid fa-location-crosshairs"></i> Location
                 <button class="btn btn-active btn-secondary" on:click={submitPosition}>                
                     {#if positionloaded}
-                    <i class="fa-solid fa-check"></i>
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 14L9 19L20 8M6 8.88889L9.07692 12L16 5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     {:else}    
                         Set Position
                     {/if}
@@ -76,55 +76,12 @@ import constants from "$lib/constants";
         background-color: white;
     }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
-        font-size: 30px;
-        width: 95vw;
-        height: 50vh;
-    }
-
-    .inputs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        color: white;
-        background-color: blue;
-        width: 80%;
-    }
-
-    .input {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-        border-radius: 20px;
-        padding: 20px;
-        color: white;
-        background-color: blue;
-        width: 80%;
-        font-size: 20px;
-    }
-
     i{
         transform: translateY(2px);
     }
 
     input {
         font-size: 1rem;
-    }
-
-    #pos {
-        margin-top: 20px;
     }
 
     i {

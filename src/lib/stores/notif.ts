@@ -3,8 +3,8 @@ import type { Writable } from "svelte/store";
 
 // Define the type for a toast
 interface Toast {
+  message: string;
   id: number;
-  type: string;
   dismissible: boolean;
   timeout: number;
 }
@@ -23,8 +23,8 @@ export const addToast = (toast: Partial<Toast>) => {
 
   // Setup some sensible defaults for a toast.
   const defaults: Toast = {
+    message: "",
     id,
-    type: "info",
     dismissible: true,
     timeout: 3000,
   };

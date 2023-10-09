@@ -58,7 +58,7 @@
 {#if loading}    
     <span class="loading loading-spinner loading-lg"></span>
 {:else}
-
+<h1 class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight text-yellow-300 md:text-5xl lg:text-6xl dark:text-white">Your previous location</h1>
     {#if alreadySaved}
         {#if savedPosition}    
             <button class="btn btn-outline btn-success  w-2/3 mx-auto" on:click={handleWaypoint}>Waypoint to last location</button>

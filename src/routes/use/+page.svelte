@@ -58,7 +58,7 @@
 {#if loading}    
     <span class="loading loading-spinner loading-lg"></span>
 {:else}
-<h1 class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight text-yellow-300 md:text-5xl lg:text-6xl dark:text-white">Your previous location</h1>
+<h1 class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight text-yellow-300 md:text-5xl lg:text-6xl sm:text-6xl dark:text-white">Your previous location</h1>
     {#if alreadySaved}
         {#if savedPosition}    
             <button class="btn btn-outline btn-success  w-2/3 mx-auto" on:click={handleWaypoint}>Waypoint to last location</button>
@@ -66,7 +66,7 @@
         {#if savedImage}
             <div class="container">
                 <img src={savedImage} alt="Your parking spot" />
-                <button on:click={openFullScreen} class="btn btn-active btn-secondary">See it in full screen</button>
+                <button on:click={openFullScreen} class="inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:text-4xl p-40">See it in full screen</button>
             </div>
         {/if}
     {:else}
@@ -75,7 +75,7 @@
 
     <div class='buttons'>
         {#if alreadySaved}
-            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 mx-auto btn-info">Change the previous location</button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:text-5xl">Change the previous location</button>
         {:else}
             <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto">Save your location</button>
         {/if}

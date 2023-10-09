@@ -17,12 +17,34 @@
 
 <div class="container">
     {#if imageloaded || positionloaded}
-    <button on:click={handle} class="btn btn-warning">let's save it !</button>
+    <button
+  class="group relative inline-block text-5xl font-medium text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+  on:click={handle} 
+    >
+  <span
+    class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-indigo-600 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"
+  ></span>
+
+  <span class="relative block border border-current bg-white px-8 py-3">
+    Save it
+  </span>
+    </button>
     {:else}
-    <div class="alert">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <span>Input position or picture to proceed</span>
-      </div>
+    <div class="flex flex-col justify-center items-center">
+        <div role="alert" class="rounded-xl border border-gray-100 bg-white p-4 sm:w-4/5">
+            <div class="flex items-start gap-4">
+                <span class="text-green-600" >
+                    <svg height="40px" width="40px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <path class="st0" d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M256,86.069 c28.463,0,51.538,23.074,51.538,51.538c0,28.464-23.074,51.538-51.538,51.538c-28.463,0-51.538-23.074-51.538-51.538 C204.462,109.143,227.537,86.069,256,86.069z M310.491,425.931H201.51v-43.593h35.667V276.329H215.38v-43.593h65.389v3.963v39.63 v106.009h29.722V425.931z"></path> </g> </g></svg>
+                </span>
+            
+                <div class="flex-1">
+                    <p class="mt-1 text-gray-700 sm:text-4xl">
+                        You can choose to input your car location and a picture of it (to remember your park number for ex), or just one of them
+                    </p>
+                </div>
+            </div>
+        </div>   
+    </div>   
     {/if}
 </div>
 

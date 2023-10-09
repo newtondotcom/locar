@@ -23,8 +23,8 @@
     
 {#if $page.url.pathname !== '/' }
 <button class="title" on:click={()=>goto("/")}>
-    <h1>locapark</h1>
-    <h2>never forget where you parked your car</h2>
+    <h1 class="sm:text-9xl">locapark</h1>
+    <h2 class="sm:text-5xl">never forget where you parked your car</h2>
 </button>
 {/if}
 <slot/>
@@ -68,7 +68,6 @@ button {
 }
 
 h1 {
-    font-size: 2rem;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #f32170,
@@ -78,7 +77,6 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #f32170,

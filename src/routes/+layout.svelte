@@ -40,6 +40,7 @@ body {
     width: 100vw;
     height: 100vh;
     color: #333;
+    background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     line-height: 1.5;

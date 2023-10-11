@@ -15,9 +15,9 @@
       {/if}
   
       <div class="flex-1">
-        <strong class="block font-medium text-gray-900"> Success </strong>
+        <strong class="block text-gray-900 sm:text-5xl"> Success </strong>
   
-        <p class="mt-1 text-sm text-gray-700">
+        <p class="mt-1 text-gray-700 sm:text-4xl">
           <slot />
         </p>
       </div>

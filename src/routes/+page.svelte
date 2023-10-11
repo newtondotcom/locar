@@ -5,7 +5,7 @@ import constants from '$lib/constants';
 
 <div class="flex flex-col justify-center items-center h-screen">
 <div class="xl:mt-32 sm:mt-10 sm:mb-20 sm:mx-10">
-    <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl sm:text-6xl dark:text-white">locapark</h1>
+    <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl sm:text-6xl ">locapark</h1>
     <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10"> is a simple app created to help you remember where you parked your car.
     It is fully open source and free to use. None of your datas is ever stored or used outside of your device.
      We respect your privacy and are not using any cookies to track you. </div>
@@ -39,7 +39,7 @@ import constants from '$lib/constants';
 </div>
 
 <div>
-  <h1 class="mb-4 mx-10 sm:text-1xl xl:text-xl font-extrabold leading-none tracking-tight text-blue-900 md:text-5xl lg:text-6xl dark:text-white">{constants.Version}</h1>
+  <h1 class="mb-4 mx-10 sm:text-1xl xl:text-xl font-extrabold leading-none tracking-tight text-blue-900 md:text-5xl lg:text-6xl ">{constants.Version}</h1>
 </div>
 
 <!--

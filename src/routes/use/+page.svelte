@@ -54,11 +54,11 @@
 
 </script>
 
-<div class="flex flex-col justify-center items-center h-screen">
+<div class="flex flex-col justify-center items-center h-screen sm:h-full">
 {#if loading}    
     <span class="loading loading-spinner loading-lg"></span>
 {:else}
-<h1 class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight text-yellow-300 md:text-5xl lg:text-6xl sm:text-6xl ">Your previous location</h1>
+<div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight text-yellow-300 lg:text-6xl sm:text-7xl ">Your previous location</div>
     {#if alreadySaved}
         {#if savedPosition}    
             <button class="btn btn-outline btn-success  w-2/3 mx-auto sm:text-4xl" on:click={handleWaypoint}>Waypoint to last location</button>
@@ -70,14 +70,14 @@
             </div>
         {/if}
     {:else}
-        <h4>looks like you have never saved your car last position</h4>
+    <div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">looks like you have never saved your car last position</div>
     {/if}
 
     <div class='buttons'>
         {#if alreadySaved}
-            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:text-5xl">Change the previous location</button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:h-32"><div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">Change the previous location</div></button>
         {:else}
-            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto">Save your location</button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto sm:h-24"><div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">Save your location</div></button>
         {/if}
     </div>
 {/if}

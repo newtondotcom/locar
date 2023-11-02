@@ -4,20 +4,20 @@ import constants from '$lib/constants';
 </script>
 
 <div class="flex flex-col justify-center items-center h-screen">
-<div class="xl:mt-32 sm:mt-10 sm:mb-20 sm:mx-10">
-    <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl sm:text-6xl ">locapark</h1>
-    <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10"> is a simple app created to help you remember where you parked your car.
+<div class="xl:mt-32 xl:w-2/3 sm:mt-10 sm:mb-20 sm:mx-10">
+    <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-5xl sm:text-6xl ">locapark</h1>
+    <div class="text-lg font-medium text-black rounded-lg content-start xl:text-4xl sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10"> is a simple app created to help you remember where you parked your car.
     It is fully open source and free to use. None of your datas is ever stored or used outside of your device.
      We respect your privacy and are not using any cookies to track you. </div>
 </div>
 
 <div>
   <button on:click={()=>goto("/use")}
-    class="inline-flex items-center rounded-xl gap-2 border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:text-6xl"
+    class="inline-flex items-center rounded-xl gap-2 border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 xl:text-3xl sm:text-6xl"
   >
     <span class="font-medium"> try it </span>
     <svg
-      class="sm:mx-3 h-20 w-20 rtl:rotate-180"
+      class="sm:mx-3 sm:h-20 sm:w-20 xl:h-10 xl:w-10 rtl:rotate-180"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -34,8 +34,8 @@ import constants from '$lib/constants';
 </div> 
 
 <div class="xl:mt-32 sm:mt-20 sm:mx-10">
-    <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10">Since this is a web site, to use it offline, you must add it to your home screen.</div>
-    <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10">A quick tutorial can be found <a href="https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/">here</a></div>
+    <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10 xl:text-3xl">Since this is a web site, to use it offline, you must add it to your home screen.</div>
+    <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10 xl:text-3xl">A quick tutorial can be found <a href="https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/">here</a></div>
 </div>
 
 <div>
@@ -83,7 +83,7 @@ import constants from '$lib/constants';
       >
         <span class="sr-only">GitHub</span>
         <svg
-          class="h-6 w-6 sm:w-20 sm:h-20"
+          class="xl:h-7 xl:w-7 sm:w-20 sm:h-20"
           fill="currentColor"
           viewBox="0 0 24 24"
           aria-hidden="true"
@@ -106,7 +106,7 @@ import constants from '$lib/constants';
       >
         <span class="sr-only">Instagram</span>
         <svg
-          class="h-6 w-6 sm:w-20 sm:h-20"
+          class="xl:h-7 xl:w-7 sm:w-20 sm:h-20"
           fill="currentColor"
           viewBox="0 0 24 24"
           aria-hidden="true"
@@ -130,7 +130,7 @@ import constants from '$lib/constants';
         <span class="sr-only">LinkedIn</span>
         <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 sm:w-16 sm:h-16"
+        class="xl:h-7 xl:w-7 sm:w-20 sm:h-20"
         fill="currentColor"
         viewBox="0 0 24 24">
         <path

@@ -54,30 +54,30 @@
 
 </script>
 
-<div class="flex flex-col justify-center items-center h-screen sm:h-full">
+<div class="flex flex-col justify-center items-center h-screen sm:h-full sm:p-0 sm:-mt-24">
 {#if loading}    
     <span class="loading loading-spinner loading-lg"></span>
 {:else}
-<div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight text-yellow-300 lg:text-6xl sm:text-7xl ">Your previous location</div>
+<div class="mb-4 sm:mt--2 mx-10 font-extrabold leading-none tracking-tight text-yellow-300 xl:text-6xl sm:text-7xl ">Your previous location</div>
     {#if alreadySaved}
         {#if savedPosition}    
-            <button class="btn btn-outline btn-success  w-2/3 mx-auto sm:text-4xl" on:click={handleWaypoint}>Waypoint to last location</button>
+            <button class="btn btn-outline btn-success  w-2/3 mx-auto sm:text-4xl sm:h-20 sm:-mb-10" on:click={handleWaypoint}>Waypoint to last location</button>
         {/if}
         {#if savedImage}
             <div class="container">
                 <img src={savedImage} alt="Your parking spot" />
-                <button on:click={openFullScreen} class="inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:text-4xl p-40">See it in full screen</button>
+                <button on:click={openFullScreen} class="inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:text-4xl p-40 sm:mt-4">See it in full screen</button>
             </div>
         {/if}
     {:else}
     <div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">looks like you have never saved your car last position</div>
     {/if}
 
-    <div class='buttons'>
+    <div class='buttons sm:-mt-10'>
         {#if alreadySaved}
-            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:h-32"><div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">Change the previous location</div></button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:h-32"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl ">Change the previous location</div></button>
         {:else}
-            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto sm:h-24"><div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">Save your location</div></button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto sm:h-24"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl ">Save your location</div></button>
         {/if}
     </div>
 {/if}
@@ -89,7 +89,6 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        margin-top: 1rem;
     }
 
     @keyframes spin {

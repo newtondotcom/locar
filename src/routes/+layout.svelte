@@ -7,6 +7,8 @@
     import "nprogress/nprogress.css";
     import NProgress from "nprogress";
     import { navigating } from "$app/stores";
+    import translate from "$lib/locales/translations";
+    
     NProgress.configure({
         minimum: 0.16,
     });
@@ -24,7 +26,7 @@
 {#if $page.url.pathname !== '/' }
 <button class="title" on:click={()=>goto("/")}>
     <h1 class="sm:text-9xl">locapark</h1>
-    <h2 class="sm:text-5xl">never forget where you parked your car</h2>
+    <h2 class="sm:text-5xl">{translate("sub")}</h2>
 </button>
 {/if}
 <slot/>

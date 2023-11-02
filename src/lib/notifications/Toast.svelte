@@ -1,28 +1,38 @@
 <script>
     import { createEventDispatcher } from "svelte";
-    import CloseIcon from "./CloseIcon.svelte";
   
     const dispatch = createEventDispatcher();
-    export let dismissible = true;
   </script>
 
-  <div role="alert" class="rounded-xl border border-gray-100 bg-white p-4">
+
+  <div role="alert" class="rounded-xl border border-greys-800 bg-white p-4 xl:text-4xl sm:text-7xl sm:mt-60">
     <div class="flex items-start gap-4">
-      {#if dismissible}
-      <button class="close" on:click={() => dispatch("dismiss")}>
-        <CloseIcon width="0.8em" />
-      </button>
-      {/if}
+      <span class="text-green-600">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="sm:w-20 sm:h-20 xl:h-6 xl:w-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </span>
   
       <div class="flex-1">
-        <strong class="block text-gray-900 sm:text-5xl"> Success </strong>
+        <strong class="block font-medium text-gray-900"> Success </strong>
   
-        <p class="mt-1 text-gray-700 sm:text-4xl">
+        <p class="mt-1 text-sm sm:text-5xl text-gray-700">
           <slot />
         </p>
       </div>
   
-      <button class="text-gray-500 transition hover:text-gray-600">
+      <button class="text-blue-950" on:click={() => dispatch("dismiss")}>
         <span class="sr-only">Dismiss popup</span>
   
         <svg
@@ -30,8 +40,8 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="currentColor"
-          class="h-6 w-6"
+          stroke="black"
+          class="sm:w-20 sm:h-20 xl:h-6 xl:w-6"
         >
           <path
             stroke-linecap="round"

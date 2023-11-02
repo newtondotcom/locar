@@ -20,6 +20,28 @@ const translations = {
         "positionsaved":"Your position has been saved ! ",
         "imagesaved":"The image has been saved ! ",
         },
+
+    "fr": {
+        "description1": 'est une application simple créée pour vous aider à vous rappeler où vous avez garé votre voiture. Elle est entièrement open source et gratuite à utiliser. Aucune de vos données n\'est jamais stockée ou utilisée en dehors de votre appareil. Nous respectons votre vie privée et n\'utilisons aucun cookie pour vous suivre.',
+        "tryit": 'essayer',
+        "pwainstall": 'Puisqu\'il s\'agit d\'un site web, pour l\'utiliser hors ligne, vous devez l\'ajouter à votre écran d\'accueil.',
+        "tuto1": "Un tutoriel rapide peut être trouvé",
+        "tuto2": " ici",
+        "sub": "ne jamais oublier où vous avez garé votre voiture",
+        "previouslocation": "Votre emplacement précédent",
+        "waypoint": "Point de repère vers le dernier emplacement",
+        "never": "il semble que vous n'ayez jamais enregistré l'emplacement précédent de votre voiture",
+        "change": "Changer l'emplacement précédent",
+        "save": "Enregistrer votre emplacement",
+        "picture": "Image de l'emplacement de votre voiture",
+        "andor": "ET / OU",
+        "position": "Position",
+        "setpos": "Définir la position",
+        "saveit": "Tout sauvegarder",
+        "tip": "Vous pouvez choisir d'entrer l'emplacement de votre voiture et une image de celle-ci (pour vous souvenir de votre numéro de stationnement, par exemple), ou simplement l'un d'entre eux",
+        "positionsaved": "Votre position a été enregistrée !",
+        "imagesaved": "L'image a été enregistrée !",
+    },
     };
 
 function translate(key: string) {

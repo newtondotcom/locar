@@ -38,7 +38,7 @@ import translate from '$lib/locales/translations';
 </div>
 
 <div>
-  <h1 class="mb-4 mx-10 sm:text-1xl font-extrabold leading-none tracking-tight text-blue-900 md:text-5xl xl:text-6xl sm:text-3xl">{constants.Version}</h1>
+  <h1 class="mb-4 mx-10 sm:text-1xl font-extrabold leading-none tracking-tight text-blue-900 md:text-5xl xl:text-6xl sm:text-2xl">{constants.Version}</h1>
 </div>
 
 <!--

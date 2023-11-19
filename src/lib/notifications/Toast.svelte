@@ -1,4 +1,5 @@
 <script>
+    import translate from "$lib/locales/translations";
     import { createEventDispatcher } from "svelte";
   
     const dispatch = createEventDispatcher();
@@ -14,7 +15,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="sm:w-20 sm:h-20 xl:h-6 xl:w-6"
+          class="sm:w-16 sm:h-16 xl:h-6 xl:w-6"
         >
           <path
             stroke-linecap="round"
@@ -25,7 +26,7 @@
       </span>
   
       <div class="flex-1">
-        <strong class="block font-medium text-gray-900"> Success </strong>
+        <strong class="block font-medium text-gray-900 sm:text-4xl"> {translate("success")} </strong>
   
         <p class="mt-1 text-sm sm:text-5xl text-gray-700">
           <slot />
@@ -41,7 +42,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="black"
-          class="sm:w-20 sm:h-20 xl:h-6 xl:w-6"
+          class="sm:w-14 sm:h-14 xl:h-6 xl:w-6"
         >
           <path
             stroke-linecap="round"

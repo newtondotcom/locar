@@ -19,6 +19,7 @@ const translations = {
         "tip":"You can choose to input your car location and a picture of it (to remember your park number for ex), or just one of them",
         "positionsaved":"Your position has been saved ! ",
         "imagesaved":"The image has been saved ! ",
+        "success":"Success !",
         },
 
     "fr": {
@@ -27,10 +28,10 @@ const translations = {
         "pwainstall": 'Puisqu\'il s\'agit d\'un site web, pour l\'utiliser hors ligne, vous devez l\'ajouter à votre écran d\'accueil.',
         "tuto1": "Un tutoriel rapide peut être trouvé",
         "tuto2": " ici",
-        "sub": "ne jamais oublier où vous avez garé votre voiture",
+        "sub": "pour ne jamais oublier où vous avez garé votre voiture",
         "previouslocation": "Votre emplacement précédent",
         "waypoint": "Point de repère vers le dernier emplacement",
-        "never": "il semble que vous n'ayez jamais enregistré l'emplacement précédent de votre voiture",
+        "never": "Il semble que vous n'ayez jamais enregistré l'emplacement précédent de votre voiture",
         "change": "Changer l'emplacement précédent",
         "save": "Enregistrer votre emplacement",
         "picture": "Image de l'emplacement de votre voiture",
@@ -41,6 +42,7 @@ const translations = {
         "tip": "Vous pouvez choisir d'entrer l'emplacement de votre voiture et une image de celle-ci (pour vous souvenir de votre numéro de stationnement, par exemple), ou simplement l'un d'entre eux",
         "positionsaved": "Votre position a été enregistrée !",
         "imagesaved": "L'image a été enregistrée !",
+        "success": "Succès !",
     },
     };
 

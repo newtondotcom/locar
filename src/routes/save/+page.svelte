@@ -4,7 +4,7 @@ let positionloaded= false
 import Success from '$lib/Success.svelte';
 import { addToast } from "$lib/stores/notif";
 import constants from "$lib/constants";
-    import translate from '$lib/locales/translations';
+import translate from '$lib/locales/translations';
 
     function submitPosition() {
         if (navigator.geolocation) {
@@ -41,12 +41,12 @@ import constants from "$lib/constants";
 </script>
 
     <div class="flex flex-col justify-center items-center h-screen w-full border-opacity-50 text-black text-xl font-semibold">
-        <div class="grid bg-slate-400 xl:h-50 sm:h-200 sm:text-5xl card rounded-box place-items-center m-4 xl:w-2/3 sm:w-4/5">
+        <div class="grid bg-slate-400 xl:h-50 sm:h-200 sm:text-4xl card rounded-box place-items-center m-4 xl:w-2/3 sm:w-4/5">
             <i class="fa-solid fa-camera"></i> {translate("picture")}
             <input id="fileInput" class="file-input file-input-bordered w-2/3 max-w-xs m-8 sm:text-5xl sm:w-full" on:change={submitFile} type="file" accept="image/*"/>
         </div>
         <div class="divider sm:text-4xl">{translate("andor")}</div>
-        <div class="grid bg-slate-400 xl:h-50 sm:h-200 sm:text-5xl card rounded-box place-items-center m-4 xl:w-2/3 sm:w-4/5">
+        <div class="grid bg-slate-400 xl:h-50 sm:h-200 sm:text-4xl card rounded-box place-items-center m-4 xl:w-2/3 sm:w-4/5">
             <i class="fa-solid fa-location-crosshairs"></i> {translate("position")}
                 <button class="inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:text-4xl sm:h-20 items-center justify-center h-screen" on:click={submitPosition}>                
                     {#if positionloaded}

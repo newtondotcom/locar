@@ -50,21 +50,21 @@
         image.src = savedImage;
         setTimeout(function(){
             w.document.write("<style>body{margin:0px;}img{heigh:90vh;width:100vw;}a{position:absolute;top:10px;left:10px;background-color:purple;border-radius:20px;border:none;height:40px;width:40px;text-decoration:none;align-items:center;color:white;display:flex;align-items:center;justify-content:center;}</style>")
-            w.document.write("<a href=\"https://locapark.org/use\"><</a>");
+            w.document.write("<a href=\"https://locapark.duckdns.org/use\"><</a>");
             w.document.write(image.outerHTML);
         }, 0);
     }
 
 </script>
 
-<div class="flex flex-col justify-center items-center h-screen sm:h-full sm:p-0 sm:-mt-24">
+<div class="flex flex-col justify-center items-center h-screen sm:h-full sm:p-0 sm:-mt-40">
 {#if loading}    
     <span class="loading loading-spinner loading-lg"></span>
 {:else}
 <div class="mb-4 sm:mt--2 mx-10 font-extrabold leading-none tracking-tight text-yellow-300 xl:text-6xl sm:text-7xl ">{translate("previouslocation")}</div>
     {#if alreadySaved}
         {#if savedPosition}    
-            <button class="btn btn-outline btn-success  w-2/3 mx-auto sm:text-4xl sm:h-20 sm:-mb-10" on:click={handleWaypoint}>{translate("waypoint")}</button>
+            <button class="btn btn-outline btn-success w-2/3 mx-auto sm:text-4xl sm:h-24 sm:-mb-4" on:click={handleWaypoint}>{translate("waypoint")}</button>
         {/if}
         {#if savedImage}
             <div class="container">
@@ -75,14 +75,14 @@
         <div class="h-1/3"/>
         {/if}
     {:else}
-    <div class="mb-4 mx-10 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">{translate("never")}</div>
+    <div class="mx-10 my-20 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">{translate("never")}</div>
     {/if}
 
     <div class='buttons sm:-mt-10'>
         {#if alreadySaved}
-            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:h-32"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl">{translate("change")}</div></button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:h-36"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl">{translate("change")}</div></button>
         {:else}
-            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto sm:h-24"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl ">{translate("save")}</div></button>
+            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto sm:h-28"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl ">{translate("save")}</div></button>
         {/if}
     </div>
 {/if}

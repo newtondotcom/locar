@@ -2,17 +2,20 @@
     import { goto } from '$app/navigation';
     import constants from '$lib/constants';
     import translate from '$lib/locales/translations';
+    export let goToHome : any;
+
     </script>
     
     <div class="flex flex-col justify-center items-center h-screen">
     <div class="xl:mt-32 xl:w-2/3 sm:-mt-24 sm:mb-20 sm:mx-10">
-        <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-5xl sm:text-6xl ">locapark</h1>
+        <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-blue-600 md:text-5xl xl:text-5xl sm:text-6xl ">locapark</h1>
         <div class="text-lg font-medium text-black rounded-lg content-start xl:text-4xl sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10">{translate("description1")}</div>
     </div>
     
     <div>
-      <button on:click={()=>goto("/use")}
-        class="inline-flex items-center rounded-xl gap-2 border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 xl:text-3xl sm:text-6xl"
+      <button
+        on:click={() => goToHome()}
+        class="inline-flex items-center rounded-xl gap-2 border border-blue-600 bg-blue-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 xl:text-3xl sm:text-6xl"
       >
         <span class="font-medium">{translate("tryit")}</span>
         <svg
@@ -38,7 +41,7 @@
     </div>
     
     <div>
-      <h1 class="mb-4 mx-10 sm:text-1xl font-extrabold leading-none tracking-tight text-blue-900 md:text-5xl xl:text-6xl sm:text-2xl">{constants.Version}</h1>
+      <h1 class="mb-4 mx-10 sm:text-1xl font-extrabold leading-none tracking-tight text-blue-300 text-4xl">{constants.Version}</h1>
     </div>
     
     <!--
@@ -73,6 +76,24 @@
     -->
     <div class="relative bottom-4 mx-auto text-center">
       <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/robin-augereau/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-gray-700 transition hover:text-gray-700/75"
+          >
+            <span class="sr-only">LinkedIn</span>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="xl:h-6 xl:w-6 sm:w-20 sm:h-20 sm:-mt-2"
+            fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+          </svg>
+          </a>
+        </li>
         <li>
           <a
             href="https://github.com/newtondotcom/locapark"
@@ -116,25 +137,6 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </a>
-        </li>
-    
-        <li>
-          <a
-            href="https://www.linkedin.com/in/robin-augereau/"
-            rel="noreferrer"
-            target="_blank"
-            class="text-gray-700 transition hover:text-gray-700/75"
-          >
-            <span class="sr-only">LinkedIn</span>
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="xl:h-6 xl:w-6 sm:w-20 sm:h-20 sm:-mt-2"
-            fill="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-          </svg>
           </a>
         </li>
       </ul>

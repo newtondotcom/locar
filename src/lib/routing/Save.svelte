@@ -5,6 +5,7 @@
     import { addToast } from "$lib/stores/notif";
     import constants from "$lib/constants";
     import translate from '$lib/locales/translations';
+    export let goToHome : any;
     
         function submitPosition() {
             if (navigator.geolocation) {
@@ -58,7 +59,7 @@
             </div>
     </div>
     
-    <Success bind:imageloaded bind:positionloaded />
+    <Success bind:imageloaded bind:positionloaded goToRecent={goToHome} />
     
     
     <style lang="postcss">

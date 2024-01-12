@@ -7,7 +7,7 @@ const translations = {
         "tuto2":" here",
         "sub":"never forget where you parked your car",
         "previouslocation":"Your previous location",
-        "waypoint":"Waypoint to last location",
+        "waypoint":"GPS Waypoint",
         "never":"looks like you have never saved your car last position",
         "change":"Change the previous location",
         "save":"Save your location",
@@ -20,6 +20,7 @@ const translations = {
         "positionsaved":"Your position has been saved ! ",
         "imagesaved":"The image has been saved ! ",
         "success":"Success !",
+        "seefullscreen":"See it in full screen",
         },
 
     "fr": {
@@ -30,7 +31,7 @@ const translations = {
         "tuto2": " ici",
         "sub": "pour ne jamais oublier où vous avez garé votre voiture",
         "previouslocation": "Votre emplacement précédent",
-        "waypoint": "Point de repère vers le dernier emplacement",
+        "waypoint": "Point GPS",
         "never": "Il semble que vous n'ayez jamais enregistré l'emplacement précédent de votre voiture",
         "change": "Changer l'emplacement précédent",
         "save": "Enregistrer votre emplacement",
@@ -43,6 +44,7 @@ const translations = {
         "positionsaved": "Votre position a été enregistrée !",
         "imagesaved": "L'image a été enregistrée !",
         "success": "Succès !",
+        "seefullscreen": "Voir en plein écran",
     },
     };
 

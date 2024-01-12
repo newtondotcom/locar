@@ -3,6 +3,7 @@
     import translate from "./locales/translations";
     export let imageloaded:boolean;
     export let positionloaded:boolean;
+    export let goToRecent : any;
 
     function handle(){
         if (!imageloaded){
@@ -11,7 +12,7 @@
         if (!positionloaded){
             localStorage.removeItem('position');
         }
-        goto("/use")
+        goToRecent();
     }
 
 </script>

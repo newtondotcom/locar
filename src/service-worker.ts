@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-app-cache-v1';
+const CACHE_NAME = 'locapark-cache-v1';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(

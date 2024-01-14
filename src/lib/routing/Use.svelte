@@ -3,6 +3,7 @@
     import { goto } from '$app/navigation';
     import NProgress from "nprogress";
     import translate from '$lib/locales/translations';
+    export let goToSave : any;
     
     let loading = true; 
     let alreadySaved = false;
@@ -50,51 +51,47 @@
         image.src = savedImage;
         setTimeout(function(){
             w.document.write("<style>body{margin:0px;}img{heigh:90vh;width:100vw;}a{position:absolute;top:10px;left:10px;background-color:purple;border-radius:20px;border:none;height:40px;width:40px;text-decoration:none;align-items:center;color:white;display:flex;align-items:center;justify-content:center;}</style>")
-            w.document.write("<a href=\"https://locapark.duckdns.org/use\"><</a>");
+            w.document.write("<a href=\"https://locapark.duckdns.org/\"><</a>");
             w.document.write(image.outerHTML);
         }, 0);
     }
 
 </script>
 
-<div class="flex flex-col justify-center items-center h-screen sm:h-full sm:p-0 sm:-mt-40">
+<div class="flex flex-col justify-center items-center min-h-full">
 {#if loading}    
     <span class="loading loading-spinner loading-lg"></span>
 {:else}
-<div class="mb-4 sm:mt--2 mx-10 font-extrabold leading-none tracking-tight text-yellow-300 xl:text-6xl sm:text-7xl ">{translate("previouslocation")}</div>
+    <div class="font-extrabold leading-none tracking-tight text-yellow-300 text-7xl absolute top-4 left-28">{translate("previouslocation")}</div>
+    
     {#if alreadySaved}
         {#if savedPosition}    
-            <button class="btn btn-outline btn-success w-2/3 mx-auto sm:text-4xl sm:h-24 sm:-mb-4" on:click={handleWaypoint}>{translate("waypoint")}</button>
+            <button class="font-bold w-2/3 mx-auto text-4xl px-4 py-7 bg-gray-300 mt-[200px] rounded-xl" on:click={handleWaypoint}>{translate("waypoint")}</button>
         {/if}
         {#if savedImage}
             <div class="container">
                 <img src={savedImage} alt="Your parking spot" />
-                <button on:click={openFullScreen} class="inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:text-4xl p-40 sm:mt-4">See it in full screen</button>
+                <button on:click={openFullScreen} class="inline-block rounded-xl border border-indigo-600 bg-indigo-600 px-12 py-3 font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 text-4xl p-40 mt-4">{translate("seefullscreen")}</button>
             </div>
         {:else}
-        <div class="h-1/3"/>
+            <div class="h-1/3"/>
         {/if}
     {:else}
-    <div class="mx-10 my-20 text-4xl font-extrabold leading-none tracking-tight lg:text-6xl sm:text-4xl ">{translate("never")}</div>
+    <div class="flex text-4xl font-extrabold leading-none tracking-tight">{translate("never")}</div>
     {/if}
 
-    <div class='buttons sm:-mt-10'>
-        {#if alreadySaved}
-            <button on:click={()=>goto("/save")} class="btn btn-outline w-2/3 h-auto mx-auto btn-info sm:h-36"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl">{translate("change")}</div></button>
-        {:else}
-            <button on:click={()=>goto("/save")} class="btn btn-outline btn-warning w-2/3 mx-auto sm:h-28"><div class="mb-4 mx-10 font-extrabold leading-none tracking-tight xl:text-6xl sm:text-4xl ">{translate("save")}</div></button>
-        {/if}
-    </div>
+    <div class="absolute bottom-[200px] left-0 flex-row justify-center items-center w-full">
+        <div class="flex justify-center items-center w-full py-7 px-4">
+            <button on:click={()=>goToSave()}
+            class="bg-gray-300 rounded-3xl w-full py-7 px-4 font-extrabold leading-none tracking-tight text-4xl">
+                {#if alreadySaved}{translate("change")}{:else}{translate("save")}{/if}
+            </button>
+        </div>  
+    </div>     
 {/if}
-</div>
+</div>  
 
 <style lang="postcss">
-    .buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
 
     @keyframes spin {
         0% { transform: rotate(0deg); }

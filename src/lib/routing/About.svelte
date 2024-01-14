@@ -7,19 +7,19 @@
     </script>
     
     <div class="flex flex-col justify-center items-center h-screen">
-    <div class="xl:mt-32 xl:w-2/3 sm:-mt-24 sm:mb-20 sm:mx-10">
-        <h1 class="xl:mb-4 sm:mb-10 mx-10 font-extrabold leading-none tracking-tight text-blue-600 md:text-5xl xl:text-5xl sm:text-6xl ">locapark</h1>
-        <div class="text-lg font-medium text-black rounded-lg content-start xl:text-4xl sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10">{translate("description1")}</div>
+    <div class=" w-4/5 mb-10">
+        <h1 class="mx-4 mb-4 font-extrabold leading-none tracking-tight text-blue-600 text-6xl ">locapark</h1>
+        <div class="font-medium text-black rounded-lg content-start text-5xl">{translate("description1")}</div>
     </div>
     
     <div>
       <button
         on:click={() => goToHome()}
-        class="inline-flex items-center rounded-xl gap-2 border border-blue-600 bg-blue-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 xl:text-3xl sm:text-6xl"
+        class="inline-flex items-center rounded-xl gap-2 border border-blue-600 bg-blue-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 text-3xl text-6xl"
       >
         <span class="font-medium">{translate("tryit")}</span>
         <svg
-          class="sm:mx-3 sm:h-20 sm:w-20 xl:h-10 xl:w-10 rtl:rotate-180"
+          class="mx-3 h-10 w-10 rtl:rotate-180"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -35,13 +35,13 @@
       </button>
     </div> 
     
-    <div class="xl:mt-32 sm:mt-20 sm:mx-10">
-        <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10 xl:text-3xl">{translate("pwainstall")}</div>
-        <div class="text-lg font-medium text-black rounded-lg content-start sm:text-5xl sm:mt-10 sm:mx-10 sm:mb-10 xl:text-3xl">{translate("tuto1")}<a href="https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/">{translate("tuto2")}</a></div>
+    <div class="mx-10">
+        <div class="font-medium text-black rounded-lg content-start text-3xl mt-10 mx-10 mb-10">{translate("pwainstall")}</div>
+        <div class="font-medium text-black rounded-lg content-start text-3xl mt-10 mx-10 mb-10">{translate("tuto1")}<a href="https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/">{translate("tuto2")}</a></div>
     </div>
     
     <div>
-      <h1 class="mb-4 mx-10 sm:text-1xl font-extrabold leading-none tracking-tight text-blue-300 text-4xl">{constants.Version}</h1>
+      <h1 class="mb-4 mx-10 font-extrabold leading-none tracking-tight text-blue-300 text-4xl">{constants.Version}</h1>
     </div>
     
     <!--
@@ -86,7 +86,7 @@
             <span class="sr-only">LinkedIn</span>
             <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="xl:h-6 xl:w-6 sm:w-20 sm:h-20 sm:-mt-2"
+            class="h-20 -mt-2"
             fill="currentColor"
             viewBox="0 0 24 24">
             <path
@@ -103,7 +103,7 @@
           >
             <span class="sr-only">GitHub</span>
             <svg
-              class="xl:h-7 xl:w-7 sm:w-20 sm:h-20"
+              class="w-20 h-20"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -126,7 +126,7 @@
           >
             <span class="sr-only">Instagram</span>
             <svg
-              class="xl:h-7 xl:w-7 sm:w-20 sm:h-20"
+              class="w-20 h-20"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"

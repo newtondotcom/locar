@@ -6,7 +6,7 @@
   </script>
 
 
-  <div role="alert" class="rounded-xl border border-greys-800 bg-white p-4 xl:text-4xl sm:text-7xl sm:mt-60">
+  <div role="alert" class="absolute top-60 left-0 w-full rounded-xl px-4 py-7 bg-gray-500 p-4">
     <div class="flex items-start gap-4">
       <span class="text-green-600">
         <svg
@@ -15,7 +15,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="sm:w-16 sm:h-16 xl:h-6 xl:w-6"
+          class="w-16 h-16"
         >
           <path
             stroke-linecap="round"
@@ -26,9 +26,9 @@
       </span>
   
       <div class="flex-1">
-        <strong class="block font-medium text-gray-900 sm:text-4xl"> {translate("success")} </strong>
+        <strong class="block font-medium text-white text-6xl pb-4"> {translate("success")} </strong>
   
-        <p class="mt-1 text-sm sm:text-5xl text-gray-700">
+        <p class="mt-1 text-5xl text-white">
           <slot />
         </p>
       </div>
@@ -41,8 +41,8 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="black"
-          class="sm:w-14 sm:h-14 xl:h-6 xl:w-6"
+          stroke="white"
+          class="w-14 h-14"
         >
           <path
             stroke-linecap="round"

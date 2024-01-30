@@ -116,5 +116,6 @@
         color: white;
         width: 95vw;
         height: 60vh;
+        margin-top: 20px;
     }
 </style>

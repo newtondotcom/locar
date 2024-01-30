@@ -37,7 +37,7 @@
 </script>
 
 <main>
-  <nav class="flex flex-row absolute bottom-0 left-0 w-full justify-center h-[150px] bg-red-400">
+  <nav class="flex flex-row absolute bottom-0 left-0 w-full justify-center h-[150px] bg-blue-400">
     {#each collection as { name, component }}
       {#if name != "About"}
         <button class="flex w-1/3 text-center self-center justify-center border-x" on:click={() => selectComponent(component)}>

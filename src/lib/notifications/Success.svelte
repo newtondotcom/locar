@@ -1,5 +1,5 @@
 <script lang="ts">
-    import translate from "./locales/translations";
+    import translate from "../locales/translations";
     export let imageloaded:boolean;
     export let positionloaded:boolean;
     export let goToRecent : any;
@@ -18,16 +18,16 @@
 
 <div class="flex flex-col justify-center align-middle">
     {#if imageloaded || positionloaded}
-        <div class="absolute top-1/4 left-0 flex-row justify-center items-center w-full flex align-middle text-center">
-            <div class="flex justify-center align-middle text-center items-center w-4/5 bg-gray-100">
+        <div class="absolute top-3/4 left-0 flex-row justify-center items-center w-full flex align-middle text-center">
+            <div class="flex justify-center align-middle text-center items-center w-4/5">
                 <button
-            class="absolute top-3/4 inline-block text-5xl font-medium focus:outline-none focus:ring active:text-blue-500 border border-current bg-blue-600 text-white rounded-full px-12 py-9 w-100"
-            on:click={handle} >
+                class="inline-block text-5xl font-medium focus:outline-none focus:ring active:text-blue-500 border border-current bg-blue-600 text-white rounded-full px-12 py-9"
+                on:click={handle} >
                     {translate("saveit")}
                 </button>
             </div>
         </div>
-    {/if}
+    {:else}
     <div class="absolute top-1/4 left-0 flex-row justify-center items-center w-full flex align-middle text-center">
         <div class="flex justify-center align-middle text-center items-center w-4/5 bg-gray-100">
             <div role="alert" class="flex self-center rounded-xl border-2 border-black-100 p-4 w-90">
@@ -45,4 +45,5 @@
             </div>   
         </div> 
     </div> 
+    {/if}
 </div>

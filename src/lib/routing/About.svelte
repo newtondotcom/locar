@@ -86,7 +86,7 @@
             <span class="sr-only">LinkedIn</span>
             <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-20 -mt-2"
+            class="h-16 -mt-2"
             fill="currentColor"
             viewBox="0 0 24 24">
             <path
@@ -103,7 +103,7 @@
           >
             <span class="sr-only">GitHub</span>
             <svg
-              class="w-20 h-20"
+              class="w-16 h-16"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -126,7 +126,7 @@
           >
             <span class="sr-only">Instagram</span>
             <svg
-              class="w-20 h-20"
+              class="w-16 h-16"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"

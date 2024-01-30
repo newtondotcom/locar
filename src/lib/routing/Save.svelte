@@ -1,7 +1,7 @@
 <script lang="ts">
     let imageloaded= false;
     let positionloaded= false
-    import Success from '$lib/Success.svelte';
+    import Success from '$lib/notifications/Success.svelte';
     import { addToast } from "$lib/stores/notif";
     import constants from "$lib/constants";
     import translate from '$lib/locales/translations';
@@ -49,9 +49,9 @@
             <div class="divider text-4xl">{translate("andor")}</div>
             <div class="grid bg-gray-300 rounded-xl h-200 text-4xl card rounded-box place-items-center w-4/5 mx-4 my-7 pt-8">
                 {translate("position")}
-                    <button class="inline-block rounded-full border border-blue-600 bg-blue-600 px-12 py-3 font-medium text-white hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-white text-4xl items-center justify-center m-8" on:click={submitPosition}>                
+                    <button class="inline-block rounded-full border border-blue-600 bg-blue-600 px-12 py-3 font-medium text-white hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-white active:bg-blue-600 text-4xl items-center justify-center m-8" on:click={submitPosition}>                
                         {#if positionloaded}
-                            <svg viewBox="0 0 24 24" class="h-4 w-4 text-white " fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            <svg viewBox="0 0 24 24" class="h-6 w-6 text-white " fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         {:else}    
                             <div class="text-4xl">{translate("setpos")}</div>
                         {/if}

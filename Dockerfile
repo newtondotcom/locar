@@ -1,20 +1,12 @@
-FROM node:18-alpine
+FROM node:lts as build-deps
+WORKDIR /usr/src/app
+COPY package.json yarn.lock ./
+RUN yarn
+COPY . ./
+RUN yarn build
 
+FROM nginx:stable-alpine3.17
 LABEL Developers="Robin Augereau"
-
-WORKDIR /app
-
-COPY --chown=node:node . .
-
-# RUN npm ci
-#RUN npm install --production
-RUN npm install
-RUN npm run build
-
-RUN rm -rf src/ static/ Dockerfile
-
-USER node:node
-
-EXPOSE 3000
-
-CMD ["node","build/index.js"]
+COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

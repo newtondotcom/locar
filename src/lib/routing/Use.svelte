@@ -77,7 +77,7 @@
             <div class="h-1/3"/>
         {/if}
     {:else}
-    <div class="flex text-4xl font-extrabold leading-none tracking-tight">{translate("never")}</div>
+    <div class="flex text-4xl font-extrabold leading-none tracking-tight mt-40">{translate("never")}</div>
     {/if}
 
     <div class="absolute bottom-[200px] left-0 flex-row justify-center items-center w-full">

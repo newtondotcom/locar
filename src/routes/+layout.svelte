@@ -17,6 +17,10 @@
 
 </script>
 
+<svelte:head>
+    <link rel="icon" href="/logo.png">
+</svelte:head>
+
 <Toasts/>
 <body>
 
@@ -34,7 +38,7 @@ body {
     height: 100vh;
     color: #333;
     background-color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0;

@@ -72,6 +72,8 @@
       <Save goToHome={openRecent}/>
     {:else if selectedComponent === Use}
       <Use goToSave={openSave}/>
+    {:else if selectedComponent === Download}
+      <Download />
     {/if}
   </section>
 </main>

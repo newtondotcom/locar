@@ -69,10 +69,14 @@
             <button class="font-bold w-2/3 mx-auto text-4xl px-4 py-7 bg-gray-300 mt-[200px] rounded-xl" on:click={handleWaypoint}>{translate("waypoint")}</button>
         {/if}
         {#if savedImage}
-            <div class="container">
-                <img src={savedImage} alt="Your parking spot" />
-                <button on:click={openFullScreen} class="inline-block rounded-xl border border-indigo-600 bg-indigo-600 px-12 py-3 font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 text-4xl p-40 mt-4">{translate("seefullscreen")}</button>
-            </div>
+        <div class="flex flex-col justify-center items-center rounded-3xl text-white text-3xl mt-40">
+                <img src={savedImage} class="object-cover rounded-lg w-4/5" alt="Your parking spot" />
+                <button on:click={openFullScreen}
+                class="bg-gray-300 text-black rounded-3xl w-full py-7 px-4 font-extrabold leading-none tracking-tight text-4xl mx-[120px]"
+                 >
+                 {translate("seefullscreen")}
+                </button>
+        </div>
         {:else}
             <div class="h-1/3"/>
         {/if}
@@ -83,7 +87,7 @@
     <div class="absolute bottom-[200px] left-0 flex-row justify-center items-center w-full">
         <div class="flex justify-center items-center w-full py-7 px-4">
             <button on:click={()=>goToSave()}
-            class="bg-gray-300 rounded-3xl w-full py-7 px-4 font-extrabold leading-none tracking-tight text-4xl">
+            class="bg-gray-300 rounded-3xl w-full py-7 px-4 font-extrabold leading-none tracking-tight text-4xl mx-[120px]">
                 {#if alreadySaved}{translate("change")}{:else}{translate("save")}{/if}
             </button>
         </div>  
@@ -92,30 +96,8 @@
 </div>  
 
 <style lang="postcss">
-
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
-    }
-
-    img {
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
-        border-radius: 20px;
-        align-items: center;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
-        font-size: 30px;
-        color: white;
-        width: 95vw;
-        height: 60vh;
-        margin-top: 20px;
     }
 </style>

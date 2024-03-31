@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
     import constants from '$lib/constants';
     import translate from '$lib/locales/translations';
     export let goToHome : any;
